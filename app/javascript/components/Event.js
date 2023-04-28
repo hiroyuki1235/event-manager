@@ -7,7 +7,7 @@ const Event = ({ events }) => {
   const event = events.find((e) => e.id === Number(id));
 
   return (
-    <>
+    <div className="eventContainer">
       <h2>
         {event.event_date}
         {' - '}
@@ -21,11 +21,11 @@ const Event = ({ events }) => {
         <li><strong>Host:</strong> {event.host}</li>
         <li><strong>Published:</strong> {event.published? 'yes' : 'no'}</li>
       </ul>
-    </>
+    </div>
   );
 };
 
-Event.propTyeps = {
+Event.propTypes = {
   events: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
