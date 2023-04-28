@@ -10,7 +10,9 @@ const root = createRoot(container);
 document.addEventListener('DOMContentLoaded', () => {
   root.render(
     <StrictMode>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </StrictMode>
   );
 });
